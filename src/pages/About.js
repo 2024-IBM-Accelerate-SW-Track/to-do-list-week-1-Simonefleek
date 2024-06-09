@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import "./About.css";
 import profilePic from "../assets/profile_pic_name.jpg"; // Replace with your actual file name
+=======
+import React from "react";
+import "./About.css";
+import profilePic from "../assets/4229.jpg"; // Replace with your actual file name
+>>>>>>> f7ce1a2 (Proflie Picture was added)
 
 const About = () => (
   <div>
@@ -26,5 +32,8 @@ const About = () => (
 );
 
 export default About;
+<<<<<<< HEAD
 =======
 >>>>>>> 87c32a8 (Changes have been made)
+=======
+>>>>>>> f7ce1a2 (Proflie Picture was added)
