@@ -36,11 +36,12 @@ class AddTodo extends Component {
         // 2. The return should also include a button with the handleSubmit function from above that is passed into
         // an OnClick event.
         // 3. The value of the text field also should reflect the local state of this component.
-        <div>
-          
-        </div>
-      );
-    }
-  }
-  
-  export default AddTodo;
+            <div className="Home">
+              <h1>Todo's</h1>
+              <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
+              <AddTodo addTodo={this.addTodo} />
+            </div>
+          );
+        }
+}
+      export default Home;

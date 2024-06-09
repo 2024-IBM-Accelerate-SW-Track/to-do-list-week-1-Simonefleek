@@ -25,6 +25,10 @@ Note: The styling for all pages are provided for you. However, feel free to play
     - A profile picture
     - Details about you like Interests, fun fact so on... To achieve this, consider using div tags to split the page in half like so
  ```
+ import React, {componet} from "react";
+import "./About.css";
+import profilePic from "../assets/profile_pic_name.jpg"; // Use your actual file name here
+
  <div>
  <div className="split left">
  <div className="centered">
@@ -37,7 +41,7 @@ Note: The styling for all pages are provided for you. However, feel free to play
  </div>
  <div className="split right">
  <div className="centered">
- <div className="name_title">Your Name</div>
+ <div className="name_title">Simone Ware</div>
  <div className="brief_description">
  // Details about you goes here
  </div>

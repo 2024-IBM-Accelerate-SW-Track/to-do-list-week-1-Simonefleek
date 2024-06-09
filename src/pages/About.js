@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "./About.css";
 import profilePic from "../assets/profile_pic_name.jpg"; // Replace with your actual file name
@@ -25,3 +26,5 @@ const About = () => (
 );
 
 export default About;
+=======
+>>>>>>> 87c32a8 (Changes have been made)
