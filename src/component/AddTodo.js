@@ -31,13 +31,13 @@ class AddTodo extends Component {
     };
     render() {
       return (
-        // 1. The return statement should include a text field input with the handleChange function from above that
-        // is passed into an onChange event.
-        // 2. The return should also include a button with the handleSubmit function from above that is passed into
-        // an OnClick event.
-        // 3. The value of the text field also should reflect the local state of this component.
         <div>
-          
+          <input
+            type="text"
+            onChange={this.handleChange} // Call handleChange on input change
+            value={this.state.content} // Reflect local state in input value
+          />
+          <button onClick={this.handleSubmit}>Add</button> {/* Call handleSubmit on button click */}
         </div>
       );
     }
