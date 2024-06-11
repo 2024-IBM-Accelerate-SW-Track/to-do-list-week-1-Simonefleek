@@ -1,6 +1,6 @@
 import React ,{ Componet} from 'react';
 import "./About.css";
-import profilePic from "../assets/https://github.com/2024-IBM-Accelerate-SW-Track/to-do-list-week-1-Simonefleek.git/4229.jpg"; // Use your actual file name here
+import s4229 from "../assets/s4229.jpg"; // Use your actual file name here
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
         <div className="centered">
           <img 
             className="profile_image"
-            src={profilePic}
+            src={4229}
             alt="Profile Pic"
           />
         </div>

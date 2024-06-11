@@ -11,33 +11,41 @@ class AddTodo extends Component {
     // The handleChange function updates the react state with the new input value provided from the user.
     // "event" is the defined action a user takes. In this case, the event is triggered when the user types something
     // into the text field.
-    handleChange = (event) => {
+     handleChange = (event) => {
       this.setState({
         content: event.target.value,
       });
     };
-    // The handleSubmit function collects the forms input and puts it into the react state.
-    // event.preventDefault() is called to prevents default event behavior like refreshing the browser.
-    // this.props.addTodo(this.state) passes the current state (or user input) into the addTodo function defined
-    // in the Home.js file which then adds the input into the list.
+  
     handleSubmit = (event) => {
       event.preventDefault();
       if (this.state.content.trim()) {
         this.props.addTodo(this.state);
         this.setState({
-          content: "",
+          content: '',
         });
       }
     };
+  
     render() {
       return (
         <div>
-          <input
-            type="text"
-            onChange={this.handleChange} // Call handleChange on input change
-            value={this.state.content} // Reflect local state in input value
+          <TextField
+            label="Add New Item"
+            variant="outlined"
+            onChange={this.handleChange}
+            value={this.state.content}
+            data-testid="new-item-textfield"
           />
-          <button onClick={this.handleSubmit}>Add</button> {/* Call handleSubmit on button click */}
+          <Button
+            style={{ marginLeft: '10px' }}
+            onClick={this.handleSubmit}
+            variant="contained"
+            color="primary"
+            data-testid="new-item-button"
+          >
+            Add
+          </Button>
         </div>
       );
     }
