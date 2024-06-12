@@ -1,54 +1,46 @@
 import React, { Component } from "react";
+import { Button, TextField } from "@mui/material";
 
 class AddTodo extends Component {
-    // A local react state of the this component with a content property set to nothing.
-    constructor() {
-      super();
-      this.state = {
-        content: "",
-      };
-    }
-    // The handleChange function updates the react state with the new input value provided from the user.
-    // "event" is the defined action a user takes. In this case, the event is triggered when the user types something
-    // into the text field.
-     handleChange = (event) => {
-      this.setState({
-        content: event.target.value,
-      });
+  constructor(props) {
+    super(props);
+    this.state = {
+      content: "", // Initialize the content state
     };
-  
-    handleSubmit = (event) => {
-      event.preventDefault();
-      if (this.state.content.trim()) {
-        this.props.addTodo(this.state);
-        this.setState({
-          content: '',
-        });
-      }
-    };
-  
-    render() {
-      return (
-        <div>
-          <TextField
-            label="Add New Item"
-            variant="outlined"
-            onChange={this.handleChange}
-            value={this.state.content}
-            data-testid="new-item-textfield"
-          />
-          <Button
-            style={{ marginLeft: '10px' }}
-            onClick={this.handleSubmit}
-            variant="contained"
-            color="primary"
-            data-testid="new-item-button"
-          >
-            Add
-          </Button>
-        </div>
-      );
-    }
   }
-  
-  export default AddTodo;
+
+  handleChange = (e) => {
+    this.setState({ content: e.target.value });
+  };
+
+  handleSubmit = () => {
+    // Implement your logic for adding a new item
+    // (e.g., call a function to update the todo list)
+    // Don't forget to clear the input field afterward.
+  };
+
+  render() {
+    return (
+      <div>
+        <TextField
+          label="Add New Item"
+          variant="outlined"
+          onChange={this.handleChange}
+          value={this.state.content}
+          data-testid="new-item-textfield"
+        />
+        <Button
+          style={{ marginLeft: "10px" }}
+          onClick={this.handleSubmit}
+          variant="contained"
+          color="primary"
+          data-testid="new-item-button"
+        >
+          Add
+        </Button>
+      </div>
+    );
+  }
+}
+
+export default AddTodo;
