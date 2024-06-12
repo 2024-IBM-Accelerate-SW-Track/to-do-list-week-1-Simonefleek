@@ -25,6 +25,6 @@ jobs:
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
-          NPM_TEST_RESULTS: ${{ steps.npm-test.outputs.result }}  # Use correct output variable syntax
+          NPM_TEST_RESULTS: "${{ steps.npm-test.outputs.result }}"  # Use correct output variable syntax
         with:
           runners: npm-test
