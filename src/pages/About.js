@@ -9,7 +9,7 @@ const About = () => {
         <div className="centered">
           <img 
             className="profile_image"
-            src={4229}
+            src={s4229}
             alt="Profile Pic"
           />
         </div>
